@@ -2,20 +2,26 @@
 //Calculate Area of a Rectangle Project
 //C++ 08/26/2025
 
+// Fixing the program from feedback for 2nd submission
+
 #include <iostream>
 #include <conio.h>
 
 using namespace std;
 
+//Adding protoypes to the functions to initiate them before main runs
+double GetLengthFromUser();
+double GetWidthFromUser();
+double CalculateArea(double length, double width);
+void DisplayArea(double area);
+
 int main()
 {
-	double length;
-	double width;
-	double area;
-	
-	GetLengthFromUser(); //Receive length from user and define variable length
-	GetWidthFromUser(); //Receive width from user and define variable width
-	CalculateArea(length, width); //Pass arguments to calculate area
+	// Run the function to initialize the variables
+
+	double length = GetLengthFromUser(); //Receive length from user and define variable length
+	double width = GetWidthFromUser(); //Receive width from user and define variable width
+	double area = CalculateArea(length, width); //Pass arguments to calculate area
 	DisplayArea(area);
 
 	(void)_getch();
@@ -44,7 +50,6 @@ double CalculateArea(double length, double width)
 	{
 		double area = length * width;
 		return area;
-
 	}
 	else
 	{
